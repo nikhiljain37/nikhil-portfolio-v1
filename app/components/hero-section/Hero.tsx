@@ -111,23 +111,38 @@ export default function Hero() {
 
       {/* IMAGE */}
       <div data-blobity-tooltip="Soft man">
-        <motion.div
-          ref={imgRef}
-          style={{ rotate }}
-          className="h-image flex items-center w-[310px] h-[380px] xl:w-[390px] xl:h-[470px] justify-center relative"
-          initial={{ opacity: 0 }}
-          animate={animateIn1}
-        >
-          <Image
-          //put the image 
-            src=""
-            priority
-            fill
-            alt="Nikhil's picture"
-            className="bg-image-radial px-10 pt-20"
-          />
-        </motion.div>
-      </div>
+  <motion.div
+    ref={imgRef}
+    style={{ rotate }}
+    className="h-image relative flex items-center justify-center w-[310px] h-[380px] xl:w-[390px] xl:h-[470px]"
+    initial={{ opacity: 0 }}
+    animate={animateIn1}
+  >
+    {/* Animated Gradient Glow */}
+    <motion.div
+      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] rounded-full blur-3xl opacity-30 z-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500"
+      animate={{
+        scale: [1, 1.12, 1],
+        opacity: [0.3, 0.5, 0.3],
+      }}
+      transition={{
+        duration: 6,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    />
+
+    {/* Transparent Image */}
+    <Image
+      src="/ME1.png"
+      priority
+      fill
+      alt="Nikhil's picture"
+      className="bg-image-radial object-contain px-10 pt-20 z-10"
+    />
+  </motion.div>
+</div>
+
     </section>
   );
 }

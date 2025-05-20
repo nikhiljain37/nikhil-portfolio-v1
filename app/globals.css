@@ -4,40 +4,42 @@
   --font-kumbh-sans: Kumbh Sans, sans-serif;
 
   /* Gradients & Backgrounds (keep if needed) */
-  --background-image-image-radial: radial-gradient(
-    circle,
-    #1e293b 0%,
-    #0f172a 74%,
-    #0a0f1a 100%
-  );
-  --background-image-icon-radial: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.03) 0%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
-  --background-image-translucent-gradient: linear-gradient(
-    to right,
-    #33415555 0%,
-    #1e293b55 100%
-  );
-  --background-image-gradient-conic: conic-gradient(
-    from 180deg at 50% 50%,
-    var(--tw-gradient-stops)
-  );
+  --background-image-image-radial: radial-gradient(circle,
+      #94a3b8 0%,
+      /* slate-400 */
+      #64748b 70%,
+      /* slate-500 */
+      #475569 100%
+      /* slate-600 */
+    );
+  --background-image-icon-radial: radial-gradient(circle,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.1) 100%);
+  --background-image-translucent-gradient: linear-gradient(to right,
+      #33415555 0%,
+      #1e293b55 100%);
+  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%,
+      var(--tw-gradient-stops));
 
   --breakpoint-smm: 435px;
 
   /* Base Colors for Skeletons and Theming */
-  --color-base-100: #0f172a;   /* slate-900 */
-  --color-base-200: #1e293b;   /* slate-800 */
-  --color-base-300: #334155;   /* slate-700 */
+  --color-base-100: #0f172a;
+  /* slate-900 */
+  --color-base-200: #1e293b;
+  /* slate-800 */
+  --color-base-300: #334155;
+  /* slate-700 */
 
   /* Accent Colors */
-  --accent: #38bdf8;           /* sky-400 */
-  --accent-hover: #0ea5e9;     /* sky-500 */
+  --accent: #38bdf8;
+  /* sky-400 */
+  --accent-hover: #0ea5e9;
+  /* sky-500 */
 }
 
 @layer base {
+
   *::before,
   *::after,
   ::backdrop,
@@ -51,18 +53,22 @@
 }
 
 body {
-  background: #0f172a; /* slate-900 */
-  color: #e2e8f0;       /* slate-200 */
+  background: #0f172a;
+  /* slate-900 */
+  color: #e2e8f0;
+  /* slate-200 */
   font-family: var(--font-kumbh-sans);
   overscroll-behavior: none;
 
   &::-webkit-scrollbar {
     width: 10px;
-    background-color: #1e293b; /* slate-800 */
+    background-color: #1e293b;
+    /* slate-800 */
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #475569; /* slate-600 */
+    background-color: #475569;
+    /* slate-600 */
     border-radius: 5px;
   }
 }
@@ -70,6 +76,7 @@ body {
 a {
   color: var(--accent);
 }
+
 a:hover {
   color: var(--accent-hover);
 }
@@ -87,11 +94,13 @@ a:hover {
     -webkit-mask-size: 300px 300px;
   }
 }
+
 @media (max-width: 1024px) {
   .h-image {
     -webkit-mask-size: 300px 300px;
   }
 }
+
 @media (max-width: 415px) {
   .h-image {
     -webkit-mask-size: 270px 270px;
@@ -124,20 +133,20 @@ a:hover {
   @apply bg-transparent opacity-50 rounded-lg motion-reduce:[transition-duration:15s];
   will-change: background-position;
   animation: skeleton 2.6s ease-in-out infinite;
-  background-image: linear-gradient(
-    105deg,
-    #0000 0% 40%,
-    var(--color-base-100) 50%,
-    #0000 60% 100%
-  );
+  background-image: linear-gradient(105deg,
+      #0000 0% 40%,
+      var(--color-base-100) 50%,
+      #0000 60% 100%);
   background-size: 200% auto;
   background-repeat: no-repeat;
   background-position-x: -50%;
 }
+
 @keyframes skeleton {
   0% {
     background-position: 150%;
   }
+
   100% {
     background-position: -50%;
   }

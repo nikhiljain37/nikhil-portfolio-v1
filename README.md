@@ -36,6 +36,6 @@ I enjoy building user-friendly web apps and exploring new technologies.
 ## 📫 Contact
 📧 Email: jainnikhil7746@gmail.com
 
-💼 LinkedIn: linkedin.com/in/niikhiljain2003
+💼 LinkedIn: https://linkedin.com/in/niikhiljain2003
 
-📷 Instagram: @niikhil.jain
+📷 Instagram: [Nikhil Jain](https://www.instagram.com/niikhil.jain/)

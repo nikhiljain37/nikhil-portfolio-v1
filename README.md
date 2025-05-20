@@ -24,7 +24,7 @@ git clone https://github.com/nikhiljain37/nikhil-portfolio-v1.git
 cd nikhil-portfolio-v1
 npm install
 npm run dev  # or npm start
-
+```
 ## 🧠 Future Improvements
 - Add a blog section
 - Integrate contact form with backend
